@@ -1,28 +1,24 @@
-public class Palmer extends Planta{
-    //private double givenWater;
+import javax.swing.*;
 
-    public Palmer( double height, String name) {
+public class Palmer extends Planta {
+
+    public Palmer(double height, String name) {
         super(height, name);
     }
 
-  /*  public double getGivenWater() {
-        return givenWater= height* 0.5;
-        Behåller jag den bara i klassen här?
-    }*/
-
     @Override
     public double getLiquidAmmount() {
-        return 0.5*this.height;
+        return 0.5 * getHeight();
     }
 
     @Override
-    public String getLiquidName() {
+    public String getLiquidType() {
         return Liquds.KRANVATTEN.typeLiquid;
     }
 
-    public String printMe() {
-        return "Palmen " + getName() + " ska vattnas med " + getWatereq(getHeight())+ "--"+  getLiquidAmmount() +" L "
-                + Liquds.KRANVATTEN.typeLiquid + "--" + getLiquidName() + " per dag";
+    public void printMe() {
+        JOptionPane.showMessageDialog(null, "Palmen " + getName() + " ska vattnas med "
+                + getLiquidAmmount() + " L " + getLiquidType() + " per dag");
     }
 
 }

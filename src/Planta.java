@@ -1,8 +1,14 @@
-
 abstract class Planta implements IPrinter {
-protected double height;
-protected String name;
+    private final double height;
+    private final String name;
 
+    /**
+     * Inkapsling ovan.
+     * Jag hade kunnat sätta setters i denna klass men valde att inte göra det
+     * då programmet ej kommer kräva detta.
+     */
+
+    //Konstruktor
     public Planta(double height, String name) {
         this.height = height;
         this.name = name;
@@ -16,18 +22,9 @@ protected String name;
         return height;
     }
 
-    public String printMe(){
-
-        return "";
-    }
-
     @Override
-    public double getLiquidAmmount() {
-        return 0;
+    public void printMe() {
+
     }
 
-    @Override
-    public String getLiquidName() {
-        return "";
-    }
 }
