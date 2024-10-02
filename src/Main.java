@@ -28,29 +28,29 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) {
-        Main vgUppgift = new Main();
-
-    }
-
     public Planta olof() { //här kan vi lägga till flera plantor om vi får fler gäster i hotellet.
-        Planta plamenolof = new Palmer(1, "olof");
+        Planta plamenolof = new Palmer(1, "olof"); //polymorfism
         return plamenolof;
     }
 
     public Planta laura() {
-        Planta palmenlaura = new Palmer(5, "Laura");
+        Planta palmenlaura = new Palmer(5, "Laura"); //Polymorfism
         return palmenlaura;
     }
 
     public Planta igge() {
-        Planta kaktusenigge = new Kaktusar(0.2, "igge");
+        Planta kaktusenigge = new Kaktusar(0.2, "igge");//polymorfism
         return kaktusenigge;
     }
 
     public Planta meatloaf() {
-        Planta köttätare = new Köttätare(0.7, "Meatloaf");
+        Planta köttätare = new Köttätare(0.7, "Meatloaf");//polymorfism
         return köttätare;
+
+    }
+
+    public static void main(String[] args) {
+        Main vgUppgift = new Main();
 
     }
 }
